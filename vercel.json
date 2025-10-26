@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/", "dest": "server.js" },
+    { "src": "/api/auth/signup", "dest": "server.js" },
+    { "src": "/api/auth/verify-otp", "dest": "server.js" },
+    { "src": "/api/auth/login", "dest": "server.js" },
+    { "src": "/api/auth/refresh-token", "dest": "server.js" },
+    { "src": "/api/property/register", "dest": "server.js" },
+    { "src": "/api/property/my-properties", "dest": "server.js" }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
